@@ -19,7 +19,7 @@
 // fn calc_score(me: RockPaperScissors, opponent: RockPaperScissors) -> u32 {
 //     use RockPaperScissors::*;
 
-//     let res = match &me {
+//     let res = match me {
 //         Rock => 1,
 //         Paper => 2,
 //         Scissors => 3,
@@ -90,7 +90,7 @@ fn calc_score(opponent: RockPaperScissors, outcome: Outcome) -> u32 {
     use Outcome::*;
     use RockPaperScissors::*;
 
-    let res = match &outcome {
+    let res = match outcome {
         Lose => 0,
         Draw => 3,
         Win => 6,
@@ -102,7 +102,7 @@ fn calc_score(opponent: RockPaperScissors, outcome: Outcome) -> u32 {
         (Rock, Lose) | (Paper, Win) | (Scissors, Draw) => Scissors,
     };
 
-    res + match &me {
+    res + match me {
         Rock => 1,
         Paper => 2,
         Scissors => 3,
